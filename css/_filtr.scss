@@ -1,0 +1,576 @@
+.main__navbar-select-wrapper {
+    position: relative;
+
+    & #main__form {
+        /* Расширенная фильтрация */
+        position: absolute;
+        width: 541.5px;
+        height: 548px;
+        right: 237px;
+        top: 54px;
+        /* РАБОЧИЙ ФОН */
+        background: #FFFFFF;
+        /* display: none; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+        z-index: 1;
+
+        & .form {
+            width: 445.5px;
+            height: 468px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            /* РАБОЧИЙ ФОН */
+            background: rgb(255, 255, 255);
+
+            &__box-top {
+                width: 445.5px;
+                height: 392px;
+                /* background: yellow; */
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                & .delivery-price-colour {
+                    width: 190.5px;
+                    height: 392px;
+                    /* background: red; */
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: flex-start;
+
+                    & .delivery {
+                        width: 136px;
+                        height: 177px;
+                        background: white;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        & .subtitle {
+                            color: rgb(5, 5, 5);
+                            font-family: $ffMontserrat;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 20px;
+                        }
+
+                        & input[type="radio"] {
+                            display: none;
+                        }
+
+                        & input[type="radio"]+label {
+                            position: relative;
+                            padding-left: 29px;
+                            cursor: pointer;
+                        }
+
+                        & input[type="radio"]+label::before {
+                            content: "";
+                            position: absolute;
+                            left: 0px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            width: 15px;
+                            height: 15px;
+                            border: 1px solid #000;
+                            border-radius: 60px;
+                            background: #fff;
+                        }
+
+                        & input[type="radio"]:checked+label::after {
+                            content: "";
+                            position: absolute;
+                            left: 3px;
+                            top: 33%;
+                            transform: translateY(-50%);
+                            width: 4px;
+                            height: 5.5px;
+                            border: solid black;
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg) translateY(-50%);
+                        }
+
+                        & label {
+                            font-family: $ffMontserrat;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 17px;
+
+                        }
+                    }
+
+                    & .price {
+                        width: 190.5px;
+                        height: 73px;
+                        background: white;
+
+                        & .subtitle {
+                            color: rgb(5, 5, 5);
+                            font-family: $ffMontserrat;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 20px;
+                        }
+
+                        &__range-box {
+                            width: 190.5px;
+                            height: 39px;
+
+                            & .range-box__elem-top {
+                                width: 185px;
+                                height: 17px;
+                                margin-top: 14px;
+                                margin-bottom: 14px;
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+
+                                & .cost-range__from {
+                                    width: 63px;
+                                    height: 17px;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    font-family: $ffMontserrat;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 17px;
+
+                                }
+
+                                & .cost-range__to {
+                                    width: 108px;
+                                    height: 17px;
+                                    display: flex;
+                                    flex-direction: row;
+                                    justify-content: space-between;
+                                    font-family: $ffMontserrat;
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    line-height: 17px;
+                                }
+                            }
+
+                            & .range-box__elem-bottom {
+                                width: 190.5px;
+                                height: 1px;
+                                background: black;
+                                position: relative;
+
+                                & input[type="range"] {
+                                    width: 190.5px;
+                                    -webkit-appearance: none;
+                                    -moz-appearance: none;
+                                    appearance: none;
+
+                                }
+
+                                & #price-range1 {
+                                    position: absolute;
+                                    top: 0px;
+                                    background: transparent;
+                                    z-index: 1;
+                                }
+
+                                & #price-range2 {
+                                    position: absolute;
+                                    top: 0px;
+                                    background: transparent;
+                                }
+
+                                & input[type="range"]::-webkit-slider-runnable-track {
+                                    /* border-radius: 10px/100%; */
+                                    height: 1px;
+                                    border: 1px middle #000;
+                                }
+
+                                & input[type="range"]::-webkit-slider-thumb {
+                                    background: black;
+                                    border: 1px solid black;
+                                    border-radius: 10px/100%;
+                                    cursor: pointer;
+                                    width: 8px;
+                                    height: 8px;
+                                    -webkit-appearance: none;
+                                    margin-top: -4px;
+                                }
+                            }
+                        }
+                    }
+
+                    & .colour {
+                        width: 189px;
+                        height: 78px;
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: flex-start;
+
+                        & .subtitle {
+                            color: rgb(5, 5, 5);
+                            font-family: $ffMontserrat;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 20px;
+                        }
+
+                        &__box-top {
+                            width: 189px;
+                            height: 15px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            & .color-options__checkbox {
+                                width: 15px;
+                                height: 15px;
+                            }
+
+                            & .checkbox {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            }
+
+                            & .checkbox__input {
+                                display: none;
+                            }
+
+                            & .checkbox__label {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                position: relative;
+                                padding-left: 30px;
+                                font-size: 14px;
+                            }
+
+                            & .checkbox__label::before {
+                                content: "";
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                                border: 1px solid #888888;
+                                position: absolute;
+                                left: 0;
+                                background-color: #fff;
+                            }
+
+                            & .checkbox__input:checked+.checkbox__label::before {
+                                background-image: url(../images/v-vector.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & #color-black:checked+.checkbox__label--black::before {
+                                background-image: url(../images/v-vector-white.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & #color-gray:checked+.checkbox__label--gray::before {
+                                background-image: url(../images/v-vector-white.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & #color-red:checked+.checkbox__label--red::before {
+                                background-image: url(../images/v-vector-white.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & .checkbox__label--white::before {
+                                background-color: #fff;
+                                border-color: #808080;
+                            }
+
+                            & .checkbox__label--black::before {
+                                background-color: #000;
+                                border-color: #000;
+                            }
+
+                            & .checkbox__label--gray::before {
+                                background-color: rgb(115, 115, 115);
+                                border-color: rgb(70, 70, 70);
+                            }
+
+                            & .checkbox__label--red::before {
+                                background-color: rgb(255, 0, 0);
+                                border-color: rgb(210, 0, 0);
+                            }
+
+                            & .checkbox__label--orange::before {
+                                background-color: rgb(255, 122, 65);
+                                border-color: rgb(210, 77, 20);
+                            }
+
+                            & .checkbox__label--gold::before {
+                                background-color: rgb(242, 203, 1);
+                                border-color: rgb(197, 158, 0);
+                            }
+
+                            & .checkbox__label--bright-green::before {
+                                background-color: rgb(0, 191, 42);
+                                border-color: rgb(0, 147, 0);
+                            }
+                        }
+
+                        &__box-bottom {
+                            width: 189px;
+                            height: 15px;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            & .color-options__checkbox {
+                                width: 15px;
+                                height: 15px;
+                            }
+
+                            & .checkbox {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                            }
+
+                            & .checkbox__input {
+                                display: none;
+                            }
+
+                            & .checkbox__label {
+                                display: flex;
+                                align-items: center;
+                                cursor: pointer;
+                                position: relative;
+                                padding-left: 30px;
+                                font-size: 14px;
+                            }
+
+                            & .checkbox__label::before {
+                                content: "";
+                                display: inline-block;
+                                width: 14px;
+                                height: 14px;
+                                border: 1px solid #888888;
+                                position: absolute;
+                                left: 0;
+                                background-color: #fff;
+                            }
+
+                            & .checkbox__input:checked+.checkbox__label::before {
+                                background-image: url(../images/v-vector.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & #color-blue:checked+.checkbox__label--blue::before {
+                                background-image: url(../images/v-vector-white.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & #color-violet-blue:checked+.checkbox__label--violet-blue::before {
+                                background-image: url(../images/v-vector-white.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & #color-barney:checked+.checkbox__label--barney::before {
+                                background-image: url(../images/v-vector-white.svg);
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                border-color: #000;
+                            }
+
+                            & .checkbox__label--caribbean-green::before {
+                                background-color: rgb(28, 204, 151);
+                                border-color: rgb(0, 159, 106);
+                            }
+
+                            & .checkbox__label--cerulean::before {
+                                background-color: rgb(0, 159, 227);
+                                border-color: rgb(0, 114, 182);
+                            }
+
+                            & .checkbox__label--blue::before {
+                                background-color: rgb(0, 10, 248);
+                                border-color: rgb(0, 0, 203);
+                            }
+
+                            & .checkbox__label--violet-blue::before {
+                                background-color: rgb(103, 16, 214);
+                                border-color: rgb(58, 0, 169);
+                            }
+
+                            & .checkbox__label--barney::before {
+                                background-color: rgb(157, 13, 181);
+                                border-color: rgb(112, 0, 137);
+                            }
+
+                            & .checkbox__label--lilac::before {
+                                background-color: rgb(216, 154, 255);
+                                border-color: rgb(171, 109, 210);
+                            }
+
+                            & .checkbox__label--hot-pink::before {
+                                background-color: rgb(255, 101, 166);
+                                border-color: rgb(210, 56, 121);
+                            }
+                        }
+
+
+                    }
+
+
+                }
+
+                & .room-type {
+                    min-width: 190px;
+                    height: 330px;
+                    /* background: red; */
+
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    box-sizing: border-box;
+
+                    &__subtitle {
+                        color: rgb(5, 5, 5);
+                        font-family: $ffMontserrat;
+                        font-size: 16px;
+                        font-weight: 500;
+                        line-height: 20px;
+
+                    }
+
+                    & .checkbox-wrapper {
+                        /* Frame 1511838676 */
+                        /* position: static; */
+                        width: 154px;
+                        height: 17px;
+                        /* Автолейаут */
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: center;
+                        gap: 14;
+                        padding: 0px;
+
+                    }
+
+                    & .kitchen,
+                    .bathroom,
+                    .children,
+                    .home-office,
+                    .living-room,
+                    .hallway,
+                    .bedroom,
+                    .wardrobe,
+                    .dacha,
+                    .light {
+                        color: rgb(0, 0, 0);
+                        letter-spacing: -0.09px;
+                        font-family: $ffMontserrat;
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 17px;
+                        margin-right: 14px;
+
+                    }
+
+                    & .checkbox {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    & .checkbox__input {
+                        display: none;
+                    }
+
+                    & .checkbox__label {
+                        display: flex;
+                        align-items: center;
+                        cursor: pointer;
+                        position: relative;
+                        padding-left: 30px;
+                        font-size: 14px;
+                    }
+
+                    & .checkbox__label::before {
+                        content: "";
+                        display: inline-block;
+                        width: 14px;
+                        height: 14px;
+                        border: 1px solid #888888;
+                        position: absolute;
+                        left: 0;
+                        background-color: #fff;
+                    }
+
+                    & .checkbox__input:checked+.checkbox__label::before {
+                        background-image: url(../images/v-vector.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        border-color: #000;
+                    }
+
+                }
+
+            }
+
+            &__box-bottom {
+                width: 445.5px;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+
+                & .form__butt {
+                    /* button */
+                    width: 190px;
+                    height: 40px;
+                    border-radius: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    box-sizing: border-box;
+                    border: 1px solid rgb(4, 4, 4);
+                    border-radius: 20px;
+                    background: transparent;
+                    color: rgb (0, 0, 0);
+                    font-family: $ffMontserrat;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 20px;
+
+
+                }
+
+                & .form__butt:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
